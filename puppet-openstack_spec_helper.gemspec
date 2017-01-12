@@ -49,6 +49,6 @@ Gem::Specification.new do |spec|
 
   # dependencies that are needed to run beaker-rspec
   spec.add_dependency 'beaker-rspec'
-  spec.add_dependency 'beaker-puppet_install_helper'
+  spec.add_dependency 'beaker-puppet_install_helper', ['0.5.0']
   spec.add_dependency 'r10k'
 end
