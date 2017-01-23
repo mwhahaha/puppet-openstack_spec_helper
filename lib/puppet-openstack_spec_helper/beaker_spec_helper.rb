@@ -53,6 +53,7 @@ RSpec.configure do |c|
         on host, "git clone https://git.openstack.org/#{repo} #{repo}"
       end
 
+      on host, "yum install -y rubygems"
       on host, "ZUUL_REF=#{zuul_ref} ZUUL_BRANCH=#{zuul_branch} ZUUL_URL=#{zuul_url} PUPPET_MAJ_VERSION=#{puppet_maj_version} bash #{repo}/install_modules.sh"
 
       # Make sure EPEL is not installed.
